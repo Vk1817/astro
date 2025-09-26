@@ -1,65 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Join Site</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-    .container {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      padding: 40px;
-      display: flex;
-      gap: 40px;
-    }
-    .window {
-      width: 200px;
-      height: 160px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border: 2px solid #007bff;
-      border-radius: 8px;
-      background: #e7f3ff;
-      box-sizing: border-box;
-    }
-    .window h2 {
-      margin-bottom: 15px;
-    }
-    .window button {
-      padding: 10px 24px;
-      font-size: 16px;
-      border: none;
-      border-radius: 4px;
-      background: #007bff;
-      color: #fff;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .window button:hover {
-      background: #0056b3;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .btn {
+            padding: 15px 30px;
+            margin: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+        }
+        .join {
+            background-color: #0088cc;
+            color: #fff;
+        }
+        .joined {
+            background-color: #34c759;
+            color: #fff;
+        }
+        #matchContent {
+            display: none;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="window">
-      <h2>Join Now</h2>
-      <button onclick="window.open(' https://t.me/+LUi94i74bckyM2U1', '_blank')">Join Now</button>
+    <h1>Welcome!</h1>
+    <button class="btn join" id="joinBtn">Join Now</button>
+    <button class="btn joined" id="joinedBtn">Already Joined</button>
+
+    <div id="matchContent">
+        <h2>Match Information</h2>
+        <iframe src="astro.html" width="80%" height="400px" style="border: none;"></iframe>
+        <!-- Or use hindi.html: <iframe src="hindi.html" width="80%" height="400px" style="border: none;"></iframe> -->
     </div>
-    <div class="window">
-      <h2>Already Joined</h2>
-      <button onclick="window.location.href='match.html'">Play Match</button>
-    </div>
-  </div>
+
+    <script>
+        document.getElementById('joinBtn').onclick = function() {
+            window.open('https://t.me/+yTkSuf20ZUtjMGVl', '_blank'); // replace with your Telegram channel link
+        };
+
+        document.getElementById('joinedBtn').onclick = function() {
+            document.getElementById('matchContent').style.display = 'block';
+        };
+    </script>
 </body>
 </html>
