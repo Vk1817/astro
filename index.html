@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Join Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .container {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 40px;
+      display: flex;
+      gap: 40px;
+    }
+    .window {
+      width: 200px;
+      height: 160px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #007bff;
+      border-radius: 8px;
+      background: #e7f3ff;
+      box-sizing: border-box;
+    }
+    .window h2 {
+      margin-bottom: 15px;
+    }
+    .window button {
+      padding: 10px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      background: #007bff;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .window button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="window">
+      <h2>Join Now</h2>
+      <button onclick="window.open(' https://t.me/+LUi94i74bckyM2U1', '_blank')">Join Now</button>
+    </div>
+    <div class="window">
+      <h2>Already Joined</h2>
+      <button onclick="window.location.href='match.html'">Play Match</button>
+    </div>
+  </div>
+</body>
+</html>
